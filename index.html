@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>自動切換佈局</title>
+	<style>
+		/* 用於電腦佈局的CSS樣式 */
+		.desktop-layout {
+			display: block;
+		}
+
+		/* 用於手機佈局的CSS樣式 */
+		.mobile-layout {
+			display: none;
+		}
+
+		/* 使用媒體查詢進行佈局切換 */
+		@media screen and (max-width: 768px) {
+			.desktop-layout {
+				display: none;
+			}
+
+			.mobile-layout {
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 用於電腦佈局的HTML代碼 -->
+	<div class="desktop-layout">
+		<h1>這是電腦佈局</h1>
+		<p>這裡是電腦佈局的內容。</p>
+	</div>
+
+	<!-- 用於手機佈局的HTML代碼 -->
+	<div class="mobile-layout">
+		<h1>這是手機佈局</h1>
+		<p>這裡是手機佈局的內容。</p>
+	</div>
+</body>
+</html>
