@@ -21,32 +21,19 @@
 		}
 
 
-    var myDiv = document.getElementById('gundong-images');
+    	var myDiv = document.getElementById('gundong-images');
 
     // 獲取所有圖片元素
-    var images = myDiv.getElementsByTagName('img');
+    	var images = myDiv.getElementsByTagName('img');
+	var counter = 0;
+    	var timer = setInterval(function() {
+      // 隱藏當前顯示的圖片
+      		images[counter].classList.remove('current');
 
-    // 計算所有圖片的總寬度
-    var totalWidth = 0;
-    for (var i = 0; i < images.length; i++) {
-      totalWidth += images[i].width;
-    }
+      // 計算下一個要顯示的圖片的索引
+      		counter = (counter + 1) % images.length;
 
-    // 設置定時器，在3秒後滾動圖片
-    var scrollInterval = setInterval(function() {
-      // 獲取當前滾動的距離
-      var currentScroll = myDiv.scrollLeft;
-
-      // 計算下一個滾動位置
-      var nextScroll = currentScroll + images[0].width;
-      if (nextScroll >= totalWidth) {
-        nextScroll = 0;
-      }
-
-      // 滾動到下一個位置
-      myDiv.scrollTo({
-        left: nextScroll,
-        behavior: 'smooth'
-      });
-    }, 3000);
+      // 顯示下一個圖片
+      		images[counter].classList.add('current');
+    	}, 3000);
 </style>
