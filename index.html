@@ -2,26 +2,16 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link rel="stylesheet" href="style.css">
-	<title>CapitalOneTW活動網站</title>
-	<script src="index.js"></script>
+	<title>記事本</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="notebook.js"></script>
 </head>
 <body>
-
-	<header style=" max-hight: 60px;">
-		<img src="Capital-One-Financial-Corporation.png" alt="Logo" style="float: left; max-width: 80px;">
-	</header>
-	<main>
-		<div id="gundong-images">
-			<img src="image1.jpg" class="current">
-    			<img src="image2.jpg">	
-		</div>
-		主要内容
-	</main>
-	<footer>
-		底部导航和版权信息
-	</footer>
+	<h1>記事本</h1>
+	<div id="note-list"></div>
+	<input type="text" id="note-input">
+	<button id="add-button">新增</button>
+	<button id="delete-button">刪除</button>
 </body>
 </html>
+
