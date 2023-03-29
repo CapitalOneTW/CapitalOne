@@ -1,4 +1,3 @@
-<style>
 $(document).ready(function() {
 	// 初始化，讀取Excel文件中的數據，並顯示在頁面上
 	var notes = [];
@@ -74,4 +73,3 @@ function saveNotes() {
 	var blob = new Blob([s2ab(wbout)], {type: 'application/octet-stream'});
 	saveAs(blob, file);
 }
-</style>
